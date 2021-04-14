@@ -6,4 +6,7 @@ body {
 
 #ram {
 	color: #0000ff;
+	cursor: pointer;
+	text-decoration: underline;
+	text-decoration-color: #0000ff;
 }
