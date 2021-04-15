@@ -13,7 +13,7 @@ function loop(time) {
 	const dt = (time - prev_time) / 1e3;
 
 	if (state == 1) {
-		const k = 100006 * Math.log(2) / (log_i * log_i); // Like real progress bars
+		const k = 128 * Math.log(2) / (log_i * log_i); // Like real progress bars
 		if (log_i < log.length && Math.random() > Math.exp(-k * dt)) {
 			document.getElementById("status").innerHTML += log[log_i] + "<br>";
 			log_i++;
@@ -55,7 +55,7 @@ function create_log() {
 		"Mounting virtual drive /proc/1/map_files/eec27916-917bb745 to /mnt",
 		"exec: kvramop()",
 		`pre_realloc(/dev/mem, ${gb}e9)`,
-		"Done"
+		"Finished loading RAM, to install it look below."
 	];
 }
 
