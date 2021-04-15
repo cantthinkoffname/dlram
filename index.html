@@ -1,12 +1,15 @@
 <!doctype html>
+<!-- All of this is a huge mess -->
 <html>
 	<head>
 		<meta charset="utf-8">
 		<title>Download some RAM!</title>
 		<link rel="stylesheet" href="style.css">
+		<script src="main.js"></script>
 	</head>
 	<body>
 		<h1>Download some RAM!</h1>
+		<h2>What is RAM?</h2>
 		<p>
 			RAM is the main component of your computer that makes it fast. <strong>The more ram you have the faster your computer will run.</strong>
 		</p>
@@ -22,6 +25,31 @@
 		</p>
 		
 		<h2>Getting RAM</h2>
-		<u id="ram" onclick="window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';">Click me for RAM!</u>
+		<p>
+			Select the amount of RAM you want. You can download as much of this as you want!
+		</p>
+		<div id="dl">
+			<span>8GB</span>
+			<span>16GB</span>
+			<span>32GB</span>
+			<span>64GB</span>
+		</div>
+
+		<div id="downloading" class="hidden">
+			<h2>RAM Loader</h2>
+			<p>
+				Note this may take some time.
+			</p>
+			<div id="status"></div>
+		</div>
+
+		<div id="after-downloading" class="hidden">
+			<h2>One more step</h2>
+			<p>
+				Your free RAM is almost ready. You just need to click this button below to load it <em>(this may take some time as loading memory is an expensive operation)</em>:
+			</p>
+
+			<button onclick="finish_ram();">Load RAM</button>
+		</div>
 	</body>
 </html>
